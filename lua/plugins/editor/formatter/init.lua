@@ -4,7 +4,6 @@ require 'configs.editor.formatter.autoCmd'
 return {
   'stevearc/conform.nvim',
   lazy = true,
-  event = 'InsertEnter',
   cmd = 'ConformInfo',
   keys = {
     {

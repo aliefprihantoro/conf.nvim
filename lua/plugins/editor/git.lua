@@ -7,12 +7,14 @@ return {
   },
   {
     'muryp/muryp-git.nvim',
+    keys = '<leader>gg',
     config = function()
       require 'muryp-git'
     end,
   },
   {
     'pwntester/octo.nvim',
+    cmd = 'Octo',
     dependencies = {
       'nvim-lua/plenary.nvim',
       'nvim-telescope/telescope.nvim',
@@ -42,6 +44,9 @@ return {
     end,
   },
   'nvim-lua/plenary.nvim',
-  'sindrets/diffview.nvim',
-  { 'akinsho/git-conflict.nvim', config = true },
+  {
+    'sindrets/diffview.nvim',
+    keys = '<leader>ggd',
+  },
+  { 'akinsho/git-conflict.nvim', config = true, keys = '<leader>ggC' },
 }

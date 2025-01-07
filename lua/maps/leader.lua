@@ -43,6 +43,18 @@ _G.MAP({
     name = '+TOGGLE',
     l = { ':LualineToggle<CR>', 'LUALINE' },
     c = { ':CodeiumToggle<CR>', 'CODEIUM' },
+    -- c = {
+    --   function()
+    --     if vim.g.copilot_enabled == false then
+    --       vim.g.copilot_enabled = true
+    --       print 'Copilot enabled'
+    --     else
+    --       vim.g.copilot_enabled = false
+    --       print 'Copilot disabled'
+    --     end
+    --   end,
+    --   'COPILOT',
+    -- },
     h = {
       function()
         return vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
