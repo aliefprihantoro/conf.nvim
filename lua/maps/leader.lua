@@ -5,7 +5,7 @@ _G.MAP({
   a = { '$', 'LAST_COL', mode = { 'n', 'v' } },
   r = { ':%s /', 'REPLACE', silent = false },
   u = { '<C-^>', 'TOGGLE_CHANGE_BUF' },
-  c = { ':e $MYVIMRC | Cdn<CR>', 'GOTO_NVIM_CONF' },
+  C = { ':e $MYVIMRC | Cdn<CR>', 'GOTO_NVIM_CONF' },
   q = { ':q<CR>', 'QUIT' },
   w = {
     function()
@@ -38,6 +38,7 @@ _G.MAP({
     w = { 'viw"+y', 'WORD' },
     W = { 'viW"+y', 'WORD_SYMBOL' },
     a = { 'ggVG"+y', 'ALL' },
+    m = {':lua require("muryp-md.select-codeblock")(true,true)<CR>', 'MARKDOWN_CODEBLOCK'},
   },
   t = {
     name = '+TOGGLE',

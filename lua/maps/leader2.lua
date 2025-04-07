@@ -46,4 +46,8 @@ _G.MAP({
     p = { ':Lazy<CR>', 'PLUGIN_LAZY' },
     c = { ':CmpStatus<CR>', 'COMPLETION_STATUS' },
   },
+  y = {
+    name = 'COPY+',
+    m = {':lua require("muryp-md.select-codeblock")(true,false)<CR>', 'MARKDOWN_CODEBLOCK'},
+  }
 }, { prefix = '<leader><leader>', noremap = true, mode = 'n', silent = true })

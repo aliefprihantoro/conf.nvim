@@ -18,7 +18,7 @@ return {
     local opts = {
       -- LazyVim will use these options when formatting with the conform.nvim formatter
       format = {
-        timeout_ms = 3000,
+        timeout_ms = 99999,
         async = false,
         quiet = true,
         lsp_fallback = true, -- not recommended to change

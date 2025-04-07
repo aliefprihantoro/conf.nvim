@@ -29,16 +29,16 @@ local dashboard = require 'alpha.themes.dashboard'
 dashboard.section.header.val = board
 
 local ShortCut = {
-  dashboard.button('F', '  Find file', ':Telescope find_files <CR>'),
+  dashboard.button('F', '󰈞  Find file', ':Telescope find_files <CR>'),
   dashboard.button('w', '  NPM WORKSPACE', ':Telescope npm_workspace <CR>'),
   dashboard.button('e', '  Open File Tree', ':Neotree<CR>'),
   dashboard.button('n', '  New file', ':ene <BAR> startinsert <CR>'),
   dashboard.button('p', '  Find project', ':Telescope work_space <CR>'),
-  dashboard.button('o', '  Recently used files', ':Telescope oldfiles <CR>'),
-  dashboard.button('g', '  Find text', ':Telescope live_grep <CR>'),
+  dashboard.button('o', '  Recently used files', ':Telescope oldfiles <CR>'),
+  dashboard.button('g', '󰈞  Find text', ':Telescope live_grep <CR>'),
   dashboard.button('c', '  Configuration', ':e $MYVIMRC | Cdn<CR>'),
   dashboard.button('z', '  Packer', ':Packer'),
-  dashboard.button('q', '  Quit Neovim', ':qa<CR>'),
+  dashboard.button('q', '󰿅  Quit Neovim', ':qa<CR>'),
   { type = 'padding', val = 1 },
   { type = 'text', val = 'Quick links', opts = { hl = 'SpecialComment', position = 'center' } },
 }
