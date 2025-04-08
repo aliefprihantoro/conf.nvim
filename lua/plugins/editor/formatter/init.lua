@@ -34,7 +34,7 @@ return {
         },
 
         prettierd = {
-          -- cwd = nil,
+          cwd = nil,
         },
         astro = {
           command = 'astrofm',

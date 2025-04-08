@@ -24,11 +24,11 @@ M.jsFam = {
   'typescriptreact',
 }
 M.ignore = { 'markdown', 'markdown.mdx' }
-addFormatter(M.jsFam, { 'prettier' })
+addFormatter(M.jsFam, { 'prettierd' })
 addFormatter({
   'html',
   'css',
   'scss',
-}, { 'prettier' })
+}, { 'prettierd' })
 
 return M

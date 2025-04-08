@@ -1,6 +1,7 @@
 --TODO: lsp/notify
 -- TODO: add file type big file where not use lsp, treesitter
 -- TODO: merge conf for filetype
+-- TODO: try prettier use server like express js
 --ntainer
 require 'configs.basic'
 require 'utils.importFolder'
