@@ -21,6 +21,7 @@ return {
   {
     'github/copilot.vim',
     config = function()
+      vim.g.copilot_no_tab_map = true
       -- vim.keymap.set('i', '<C-g>', 'copilot#Accept()', { silent = true, expr = true, script = true })
       -- vim.keymap.set('i', '<C-g>', '<Plug>(copilot-accept-line)')
       vim.keymap.set('i', '<C-g>', 'copilot#Accept("\\<CR>")', {
@@ -96,7 +97,6 @@ return {
       vim.api.nvim_create_user_command('CopilotChatBuffer', function(args)
         chat.ask(args.args, { selection = select.buffer })
       end, { nargs = '*', range = true })
-
     end,
     event = 'VeryLazy',
     keys = {
