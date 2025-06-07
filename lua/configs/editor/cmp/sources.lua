@@ -1,5 +1,8 @@
 local M = {}
 M.sc1 = {
+  {
+    name = 'html-css',
+  },
   { name = 'nvim_lsp' },
   { name = 'luasnip' }, -- For luasnip users.
   -- { name = 'zsh' },
@@ -16,10 +19,10 @@ M.sc1 = {
       },
     },
   },
+  { name = 'path', priority = 7 },
 }
 M.sc2 = {
   { name = 'buffer', priority = 7 },
-  { name = 'path', priority = 7 },
   {
     name = 'emmet_vim',
     priority = 9,

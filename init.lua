@@ -16,3 +16,8 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufNewFile' }, {
   pattern = '.env*',
   command = 'set filetype=dotenv',
 })
+
+_G.MURYP_CURR_NODE = function()
+	local node = vim.treesitter.get_node()
+  print(vim.inspect(node))
+end

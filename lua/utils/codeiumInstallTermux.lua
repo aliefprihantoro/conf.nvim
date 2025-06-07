@@ -9,15 +9,15 @@ return function()
     if isHaveFile ~= 1 then
       vim.fn.rename(OLD_FILE, NEW_FILE)
       vim.fn.system('chmod +x ' .. NEW_FILE)
-      vim.fn.system('chmod +x ' .. OLD_FILE)
       vim.fn.system(
         'echo "#!/data/data/com.termux/files/usr/bin/bash\n proot-distro login '
           .. NAME_DISTRO
           .. ' -- '
           .. NEW_FILE
-          .. ' $@" > '
+          .. ' \\$@" > '
           .. OLD_FILE
       )
+      vim.fn.system('chmod +x ' .. OLD_FILE)
     end
   end
 end

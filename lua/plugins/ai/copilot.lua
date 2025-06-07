@@ -18,42 +18,42 @@ local prompts = {
 }
 
 return {
-  {
-    'github/copilot.vim',
-    config = function()
-      vim.g.copilot_no_tab_map = true
-      -- vim.keymap.set('i', '<C-g>', 'copilot#Accept()', { silent = true, expr = true, script = true })
-      -- vim.keymap.set('i', '<C-g>', '<Plug>(copilot-accept-line)')
-      vim.keymap.set('i', '<C-g>', 'copilot#Accept("\\<CR>")', {
-        expr = true,
-        replace_keycodes = false,
-      })
-      vim.keymap.set('i', '<C-e>', '<Plug>(copilot-accept-word)')
-      vim.g.copilot_no_tab_map = true
-
-      vim.api.nvim_set_keymap('i', '<C-n>', 'copilot#Next()', { silent = true, expr = true, script = true })
-      vim.api.nvim_set_keymap('i', '<C-p>', 'copilot#Previous()', { silent = true, expr = true, script = true })
-      vim.api.nvim_set_keymap('i', '<C-x>', 'copilot#Clear()', { silent = true, expr = true, script = true })
-
-      -- Optionally, disable Copilot suggestions for specific file types
-      vim.cmd [[
-    let g:copilot_filetypes = {
-      \ 'dotenv': v:false,
-      \ 'markdown': v:false,
-      \ }
-    ]]
-    end,
-  },
-  {
-    'folke/which-key.nvim',
-    optional = true,
-    opts = {
-      spec = {
-        { '<leader>c', group = 'copilot' },
-        { '<leader>gm', group = 'Copilot Chat' },
-      },
-    },
-  },
+  -- {
+  --   'github/copilot.vim',
+  --   config = function()
+  --     vim.g.copilot_no_tab_map = true
+  --     -- vim.keymap.set('i', '<C-g>', 'copilot#Accept()', { silent = true, expr = true, script = true })
+  --     -- vim.keymap.set('i', '<C-g>', '<Plug>(copilot-accept-line)')
+  --     vim.keymap.set('i', '<C-g>', 'copilot#Accept("\\<CR>")', {
+  --       expr = true,
+  --       replace_keycodes = false,
+  --     })
+  --     vim.keymap.set('i', '<C-e>', '<Plug>(copilot-accept-word)')
+  --     vim.g.copilot_no_tab_map = true
+  --
+  --     vim.api.nvim_set_keymap('i', '<C-n>', 'copilot#Next()', { silent = true, expr = true, script = true })
+  --     vim.api.nvim_set_keymap('i', '<C-p>', 'copilot#Previous()', { silent = true, expr = true, script = true })
+  --     vim.api.nvim_set_keymap('i', '<C-x>', 'copilot#Clear()', { silent = true, expr = true, script = true })
+  --
+  --     -- Optionally, disable Copilot suggestions for specific file types
+  --     vim.cmd [[
+  --   let g:copilot_filetypes = {
+  --     \ 'dotenv': v:false,
+  --     \ 'markdown': v:false,
+  --     \ }
+  --   ]]
+  --   end,
+  -- },
+  -- {
+  --   'folke/which-key.nvim',
+  --   optional = true,
+  --   opts = {
+  --     spec = {
+  --       { '<leader>c', group = 'copilot' },
+  --       { '<leader>gm', group = 'Copilot Chat' },
+  --     },
+  --   },
+  -- },
   {
     'CopilotC-Nvim/CopilotChat.nvim',
     -- version = "v3.3.0", -- Use a specific version to prevent breaking changes
@@ -66,7 +66,7 @@ return {
       answer_header = '## Copilot ',
       error_header = '## Error ',
       prompts = prompts,
-      -- model = "claude-3.7-sonnet",
+      model = 'gpt-4.1',
       mappings = {
         -- Reset the chat buffer
         reset = {

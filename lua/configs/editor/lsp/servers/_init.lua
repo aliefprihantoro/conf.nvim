@@ -3,9 +3,34 @@ local lsp = require 'lspconfig'
 lsp.cssls.setup {} --- css
 lsp.tailwindcss.setup {
   tailwindCSS = {
+    ['experimental.configFile'] ='src/**/App.css',
     classAttributes = { 'class', 'className', 'class:list', 'classList', 'ngClass', 'DefaultClassName' },
     ['editor.quickSuggestions'] = {
       strings = 'on',
+    },
+    includeLanguages = {
+      html = 'html',
+      javascript = 'javascript',
+      javascriptreact = 'javascriptreact',
+      typescript = 'typescript',
+      typescriptreact = 'typescriptreact',
+      vue = 'vue',
+      svelte = 'svelte',
+      php = 'php',
+      astro = 'astro',
+      css = 'css',
+    },
+    filetypes = {
+      'html',
+      'javascript',
+      'javascriptreact',
+      'typescript',
+      'typescriptreact',
+      'vue',
+      'svelte',
+      'php',
+      'astro',
+      'css',
     },
   },
 } --- tailwindcss

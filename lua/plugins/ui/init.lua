@@ -35,7 +35,6 @@ return {
   },
   {
     'nvim-lualine/lualine.nvim',
-    cmd = 'LualineToggle',
     config = function()
       require 'configs.ui.lualine'
     end,
