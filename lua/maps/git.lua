@@ -241,7 +241,7 @@ _G.MAP({
       r = { git.remote.rm, 'REMOVE' },
       c = { git.remote.changeUrl, 'CHANGE_URL' },
       a = { git.remote.add, 'ADD' },
-      c = { git.remote.copy, 'COPY' },
+      y = { git.remote.copy, 'COPY' },
       s = { git.remote.show, 'SHOW' },
       u = { git.remote.httpToSsh, 'HTTP_TO_SSH' },
       U = { git.remote.sshToHttp, 'SSH_TO_HTTP' },

@@ -88,6 +88,5 @@ return {
       },
     }
     require('codeium.virtual_text').status_string()
-    local key = vim.keymap.set
   end,
 }

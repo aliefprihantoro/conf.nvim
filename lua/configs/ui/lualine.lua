@@ -15,23 +15,23 @@ if statusNavic then
   }
 end
 local codeium = function()
-	local status_codeium = require('codeium.virtual_text').status()
+  local status_codeium = require('codeium.virtual_text').status()
 
-	if status_codeium.state == 'idle' then
-		-- Output was cleared, for example when leaving insert mode
-        return ' '
-    end
+  if status_codeium.state == 'idle' then
+    -- Output was cleared, for example when leaving insert mode
+    return ' '
+  end
 
-	if status_codeium.state == 'waiting' then
-		-- Waiting for response
-		return "Waiting..."
-    end
+  if status_codeium.state == 'waiting' then
+    -- Waiting for response
+    return 'Waiting...'
+  end
 
-	if status_codeium.state == 'completions' and status_codeium.total > 0 then
-        return string.format('%d/%d', status_codeium.current, status_codeium.total)
-    end
+  if status_codeium.state == 'completions' and status_codeium.total > 0 then
+    return string.format('%d/%d', status_codeium.current, status_codeium.total)
+  end
 
-	return ' 0 '
+  return ' 0 '
 end
 
 lualine.setup {

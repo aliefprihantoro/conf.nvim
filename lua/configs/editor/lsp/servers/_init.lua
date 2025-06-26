@@ -3,7 +3,7 @@ local lsp = require 'lspconfig'
 lsp.cssls.setup {} --- css
 lsp.tailwindcss.setup {
   tailwindCSS = {
-    ['experimental.configFile'] ='src/**/App.css',
+    ['experimental.configFile'] = 'src/**/App.css',
     classAttributes = { 'class', 'className', 'class:list', 'classList', 'ngClass', 'DefaultClassName' },
     ['editor.quickSuggestions'] = {
       strings = 'on',

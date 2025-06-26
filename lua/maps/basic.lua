@@ -18,6 +18,7 @@ _G.MAP({
   },
   f = {
     name = '+TELESCOPE',
+    a = { ':Telescope addDirFile<CR>', 'LIST_ALL' },
     l = { ':Telescope<CR>', 'LIST_ALL' },
     f = { ':Telescope find_files<CR>', 'FIND_FILE' },
     g = { ':Telescope live_grep<CR>', 'LIVE_GREP' },

@@ -48,6 +48,6 @@ _G.MAP({
   },
   y = {
     name = 'COPY+',
-    m = {':lua require("muryp-md.select-codeblock")(true,false)<CR>', 'MARKDOWN_CODEBLOCK'},
-  }
+    m = { ':lua require("muryp-md.select-codeblock")(true,false)<CR>', 'MARKDOWN_CODEBLOCK' },
+  },
 }, { prefix = '<leader><leader>', noremap = true, mode = 'n', silent = true })

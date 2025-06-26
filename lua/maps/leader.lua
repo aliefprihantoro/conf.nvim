@@ -38,7 +38,7 @@ _G.MAP({
     w = { 'viw"+y', 'WORD' },
     W = { 'viW"+y', 'WORD_SYMBOL' },
     a = { 'ggVG"+y', 'ALL' },
-    m = {':lua require("muryp-md.select-codeblock")(true,true)<CR>', 'MARKDOWN_CODEBLOCK'},
+    m = { ':lua require("muryp-md.select-codeblock")(true,true)<CR>', 'MARKDOWN_CODEBLOCK' },
   },
   t = {
     name = '+TOGGLE',
@@ -61,6 +61,19 @@ _G.MAP({
         return vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
       end,
       'HINT_LSP',
+    },
+    C = {
+      function()
+        local current = vim.wo.conceallevel
+        if current > 0 then
+          vim.wo.conceallevel = 0
+          print 'Conceal disabled'
+        else
+          vim.wo.conceallevel = 2
+          print 'Conceal enabled (level 2)'
+        end
+      end,
+      'CONSEAL_LEVEL',
     },
     w = {
       function()
