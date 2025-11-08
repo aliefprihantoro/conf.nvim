@@ -46,7 +46,8 @@ return {
   'nvim-lua/plenary.nvim',
   {
     'sindrets/diffview.nvim',
-    keys = '<leader>ggd',
+    cmd = 'DiffviewOpen',
   },
   { 'akinsho/git-conflict.nvim', config = true, keys = '<leader>ggC' },
+
 }

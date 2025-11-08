@@ -38,6 +38,8 @@
 -- }
 return {
   'Exafunction/windsurf.nvim',
+  cmd = 'CodeiumToggle',
+  lazy = true,
   dependencies = {
     'nvim-lua/plenary.nvim',
     'hrsh7th/nvim-cmp',

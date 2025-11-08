@@ -27,4 +27,15 @@ return {
       close_tag_on_complete = true, -- default: true
     },
   },
+  -- {
+  --   'pmizio/typescript-tools.nvim',
+  --   dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
+  --   opts = {
+  --     -- tsserver_path = '/usr/lib/node_modules/typescript/lib/tsserver.js', -- sesuaikan path di Debian
+  --     tsserver_plugins = {},
+  --     settings = {
+  --       separate_diagnostic_server = true,
+  --     },
+  --   },
+  -- },
 }
