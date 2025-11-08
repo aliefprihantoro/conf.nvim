@@ -14,25 +14,25 @@ if statusNavic then
     end,
   }
 end
-local codeium = function()
-  local status_codeium = require('codeium.virtual_text').status()
-
-  if status_codeium.state == 'idle' then
-    -- Output was cleared, for example when leaving insert mode
-    return ' '
-  end
-
-  if status_codeium.state == 'waiting' then
-    -- Waiting for response
-    return 'Waiting...'
-  end
-
-  if status_codeium.state == 'completions' and status_codeium.total > 0 then
-    return string.format('%d/%d', status_codeium.current, status_codeium.total)
-  end
-
-  return ' 0 '
-end
+-- local codeium = function()
+--   local status_codeium = require('codeium.virtual_text').status()
+--
+--   if status_codeium.state == 'idle' then
+--     -- Output was cleared, for example when leaving insert mode
+--     return ' '
+--   end
+--
+--   if status_codeium.state == 'waiting' then
+--     -- Waiting for response
+--     return 'Waiting...'
+--   end
+--
+--   if status_codeium.state == 'completions' and status_codeium.total > 0 then
+--     return string.format('%d/%d', status_codeium.current, status_codeium.total)
+--   end
+--
+--   return ' 0 '
+-- end
 
 lualine.setup {
   options = {
@@ -54,7 +54,12 @@ lualine.setup {
     },
     lualine_b = { { 'filename', path = 1 } },
     lualine_x = {},
-    lualine_y = { codeium, 'diff', 'diagnostics', 'filetype' },
+    lualine_y = {
+      -- codeium
+      'diff',
+      'diagnostics',
+      'filetype',
+    },
     lualine_z = {
       {
         'branch',
