@@ -1,13 +1,12 @@
-local lsp = require 'lspconfig'
-
-lsp.html.setup {
-  filetypes = { 'html', 'javascript', 'typescript' },
-  init_options = {
-    configurationSection = { 'html', 'javascript', 'typescript', 'css' },
-    embeddedLanguages = {
-      css = true,
-      javascript = true,
-      typescript = true,
-    },
-  },
-}
+vim.lsp.enable('html')
+-- lsp.html = {
+--   filetypes = { 'html', 'javascript', 'typescript' },
+--   init_options = {
+--     configurationSection = { 'html', 'javascript', 'typescript', 'css' },
+--     embeddedLanguages = {
+--       css = true,
+--       javascript = true,
+--       typescript = true,
+--     },
+--   },
+-- }

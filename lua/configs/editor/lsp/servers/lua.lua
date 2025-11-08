@@ -1,4 +1,4 @@
-local lsp = require 'lspconfig'
+local lsp = vim.lsp.config
 local runtime_path = {}
 table.insert(runtime_path, 'lua/init.lua')
 table.insert(runtime_path, 'lua/?.lua')
@@ -30,8 +30,8 @@ end
 
 _G.LIST_DIR_LUA = LIST_DIR
 
-lsp.luau_lsp.setup {} --- lua
-lsp.lua_ls.setup {
+-- lsp.luau_lsp = {} --- lua
+lsp('lua_ls', {
   single_file_support = true,
   on_init = function(client)
     local path = client.workspace_folders[1].name
@@ -82,4 +82,5 @@ lsp.lua_ls.setup {
   settings = {
     Lua = {},
   },
-}
+})
+vim.lsp.enable('lua_ls')
