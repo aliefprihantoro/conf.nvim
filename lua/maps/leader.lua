@@ -43,7 +43,7 @@ _G.MAP({
   t = {
     name = '+TOGGLE',
     l = { ':LualineToggle<CR>', 'LUALINE' },
-    c = { ':CodeiumToggle<CR>', 'CODEIUM' },
+    c = { ':Codeium Toggle<CR>', 'CODEIUM' },
     -- c = {
     --   function()
     --     if vim.g.copilot_enabled == false then
