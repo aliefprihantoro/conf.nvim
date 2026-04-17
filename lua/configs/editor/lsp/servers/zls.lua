@@ -1,0 +1,36 @@
+vim.lsp.enable 'zls'
+-- local function get_zig_env()
+--   -- Jalankan 'zig env' secara sinkron
+--   local obj = vim.system({ 'zig', 'env' }, { text = true }):wait()
+--
+--   if obj.code == 0 then
+--     -- Parse JSON string menjadi tabel Lua
+--     local success, env = pcall(vim.json.decode, obj.stdout)
+--     if success then
+--       return env
+--     end
+--   end
+--
+--   -- Fallback jika gagal (pastikan 'zig' ada di PATH)
+--   return nil
+-- end
+--
+-- local zig_env = get_zig_env()
+-- local zig_lib = zig_env and zig_env.lib_dir or ""
+-- local zig_bin = zig_env and zig_env.zig_exe or "zig"
+--
+-- vim.lsp.config('zls', {
+--   cmd = { "zls" },
+--   settings = {
+--     zls = {
+--       -- Otomatis sinkron dengan versi compiler yang aktif
+--       zig_lib_path = zig_lib,
+--       zig_exe_path = zig_bin,
+--
+--       -- Opsional: Tambahkan fitur ini untuk stabilitas 0.15.x
+--       enable_snippets = true,
+--       enable_autofix = true,
+--       warn_style = true,
+--     },
+--   },
+-- })

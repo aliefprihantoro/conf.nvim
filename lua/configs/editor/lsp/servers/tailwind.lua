@@ -1,0 +1,33 @@
+-- -- Konfigurasi Tailwind CSS LSP dengan API terbaru
+-- vim.lsp.config('tailwindcss', {
+--   cmd = { 'tailwindcss-language-server', '--stdio' },
+--   -- Trigger wajib agar tidak lag dan completion muncul (berdasarkan temuanmu)
+--   root_markers = { 'tailwind.config.mjs', 'tailwind.config.js', 'tailwind.config.ts', 'package.json' },
+--   settings = {
+--     -- Tambahan agar completion muncul otomatis di dalam string/template literal
+--     ['editor.quickSuggestions'] = {
+--       strings = 'on',
+--     },
+--     tailwindCSS = {
+--       -- Sesuai workflow: deteksi className di fragmen html`...`
+--       experimental = {
+--         classRegex = {
+--           { 'html\\`([^\\`]*)\\`', 'class(?:Name)?="([^"]*)"' },
+--           { 'class(?:Name)?="([^"]*)"' },
+--         },
+--       },
+--       includeLanguages = {
+--         javascript = 'javascript',
+--         typescript = 'typescript',
+--         html = 'html',
+--       },
+--       -- Optimasi performa agar tidak scanning folder sampah
+--       files = {
+--         exclude = { '**/node_modules/**', '**/.git/**' },
+--       },
+--     },
+--   },
+-- })
+--
+-- -- Aktifkan secara native
+-- vim.lsp.enable 'tailwindcss'

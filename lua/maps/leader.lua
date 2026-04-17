@@ -78,6 +78,7 @@ _G.MAP({
     w = {
       function()
         opts.wrap = not opts.wrap
+        opts.linebreak = not opts.linebreak
       end,
       'WORD_WRAP',
     },

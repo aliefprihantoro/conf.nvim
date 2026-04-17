@@ -4,6 +4,7 @@ return {
   cmd = 'Neotree',
   config = function()
     require('neo-tree').setup {
+      group_empty = true,
       close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
       sort_case_insensitive = false, -- used when sorting files and directories in the tree
       default_component_configs = {
@@ -65,7 +66,7 @@ return {
             '.git',
           },
         },
-        group_empty_dirs = true, -- when true, empty folders will be grouped together
+        group_empty_dirs = false, -- when true, empty folders will be grouped together
         window = {
           mappings = {
             ['u'] = 'navigate_up',

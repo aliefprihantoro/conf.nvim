@@ -2,6 +2,10 @@ local lsp = vim.lsp.buf
 local opts = { prefix = '', noremap = true, mode = 'n', silent = true }
 _G.MAP({
   K = { lsp.hover, '' },
+  ['<DOWN>'] = { 'gj', 'GO_DOWN' },
+  ['<UP>'] = { 'gk', 'GO_UP' },
+  j = { 'gj', 'GO_DOWN' },
+  k = { 'gk', 'GO_UP' },
   ['<Esc>'] = { ':noh<CR>' },
   ['<c-d>'] = { vim.diagnostic.open_float, 'DIAGNOSTIC_OPEN_FLOAT' },
   ['<c-S>'] = {
@@ -28,6 +32,7 @@ _G.MAP({
     C = { ':Telescope command_history<CR>', 'CMD_HISTORY' },
     c = { ':Telescope commands<CR>', 'COMMAND' },
     d = { ':Telescope muryp_cd<CR>', 'CD' },
+    D = { ':Telescope muryp_CD<CR>', 'CD_NESTED' },
     w = {
       name = '+WORKSPACE',
       n = { ':Telescope npm_workspace<CR>', 'NPM_WORKSPACE' },

@@ -43,7 +43,8 @@ return {
     ['<C-f>'] = layouts.toggle_preview,
     ['<C-o>'] = single_or_multi_select,
     ['<c-u>'] = false,
-    ['<c-l>'] = false,
+    ['<c-l>'] = actions.preview_scrolling_right,
+    ['<c-h>'] = actions.preview_scrolling_left,
     ['<C-a>'] = actions.toggle_all,
   },
   n = {

@@ -17,16 +17,16 @@ return {
       _G.IMPORT_FOLDER { include = 'configs/editor/lsp' }
     end,
   },
-  {
-    'ricardoramirezr/blade-nav.nvim',
-    dependencies = { -- totally optional
-      'hrsh7th/nvim-cmp', -- if using nvim-cmp
-    },
-    ft = { 'blade', 'php' }, -- optional, improves startup time
-    opts = {
-      close_tag_on_complete = true, -- default: true
-    },
-  },
+  -- {
+  --   'ricardoramirezr/blade-nav.nvim',
+  --   dependencies = { -- totally optional
+  --     'hrsh7th/nvim-cmp', -- if using nvim-cmp
+  --   },
+  --   ft = { 'blade', 'php' }, -- optional, improves startup time
+  --   opts = {
+  --     close_tag_on_complete = true, -- default: true
+  --   },
+  -- },
   -- {
   --   'pmizio/typescript-tools.nvim',
   --   dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
