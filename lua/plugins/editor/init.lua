@@ -25,6 +25,7 @@ return {
   },
   {
     'muryp/muryp-md.nvim',
+    pin = true,
     config = function()
       require('muryp-md').setup()
     end,

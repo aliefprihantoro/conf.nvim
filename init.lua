@@ -16,3 +16,15 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufNewFile' }, {
   pattern = '.env*',
   command = 'set filetype=dotenv',
 })
+
+-- Di init.lua
+vim.g.markdown_fenced_languages = {
+  "html",
+  "javascript",
+  "typescript",
+  "python",
+  "lua",
+  "vim",
+  "sh",
+  "bash"
+}

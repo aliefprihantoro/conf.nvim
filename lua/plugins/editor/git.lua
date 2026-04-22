@@ -7,6 +7,7 @@ return {
   },
   {
     'muryp/muryp-git.nvim',
+    pin = true,
     keys = '<leader>gg',
     config = function()
       require 'muryp-git'
@@ -39,6 +40,7 @@ return {
   'folke/which-key.nvim',
   {
     'muryp/muryp-gh.nvim',
+    pin = true,
     config = function()
       require('muryp-gh').setup()
     end,

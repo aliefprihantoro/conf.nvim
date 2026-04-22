@@ -10,7 +10,7 @@ return {
     'tamago324/cmp-zsh',
     'Shougo/deol.nvim',
     --   "jcha0713/cmp-tw2css",
-    'dcampos/cmp-emmet-vim',
+    -- 'dcampos/cmp-emmet-vim',
     'mattn/emmet-vim',
     'hrsh7th/cmp-nvim-lua',
     'saadparwaiz1/cmp_luasnip',
@@ -32,6 +32,7 @@ return {
         'onsails/lspkind.nvim',
         {
           'muryp/nvim-muryp-snippet-collection',
+          pin = true,
           -- 'rafamadriz/friendly-snippets',
           config = function()
             require 'configs.editor.cmp.snippets'
