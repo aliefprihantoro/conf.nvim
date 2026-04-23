@@ -1,5 +1,6 @@
 -- vim.cmd("autocmd!")
 local set = vim.opt
+vim.cmd("syntax off")
 set.swapfile = false
 set.background = 'dark'
 set.compatible = false

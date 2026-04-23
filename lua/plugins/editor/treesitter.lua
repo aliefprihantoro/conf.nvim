@@ -1,24 +1,24 @@
 return {
   'nvim-treesitter/nvim-treesitter',
-  event = 'BufRead',
+  lazy = false,
   opts = true,
   config = function()
     require 'configs.editor.treesitter'
   end,
-  branch = "main",
+  branch = 'main',
   dependencies = {
-    -- {
-    --   'windwp/nvim-ts-autotag',
-    --   event = 'InsertEnter',
-    --   opts = {
-    --     -- Di versi baru, cukup begini saja jika ingin default
-    --     opts = {
-    --       enable_close = true,
-    --       enable_rename = true,
-    --       enable_close_on_slash = true,
-    --     },
-    --   },
-    -- },
+    {
+      'windwp/nvim-ts-autotag',
+      event = 'InsertEnter',
+      opts = {
+        -- Di versi baru, cukup begini saja jika ingin default
+        opts = {
+          enable_close = true,
+          enable_rename = true,
+          enable_close_on_slash = true,
+        },
+      },
+    },
     -- {
     --   'JoosepAlviste/nvim-ts-context-commentstring',
     --   config = function()
