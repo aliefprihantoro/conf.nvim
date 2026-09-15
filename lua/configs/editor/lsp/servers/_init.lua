@@ -4,7 +4,7 @@ enable 'cssls'
 -- enable 'tailwindcss'
 enable 'gopls'
 -- enable('phpactor')
--- enable('svelte')
+enable('svelte')
 -- enable('cssmodules_ls')
 enable 'bashls'
 enable 'pyright'
@@ -15,7 +15,7 @@ enable 'stylelint_lsp'
 enable 'eslint'
 
 -- Mengaktifkan clangd secara global untuk filetype cpp/c
-vim.lsp.enable('clangd')
+enable('clangd')
 
 -- Opsional: Tambahkan keybindings standar biar bisa navigasi
 vim.api.nvim_create_autocmd('LspAttach', {

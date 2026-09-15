@@ -41,3 +41,4 @@ cmp.setup {
 }
 
 require 'configs.editor.cmp.cmdLine'
+require("completion.cpp")

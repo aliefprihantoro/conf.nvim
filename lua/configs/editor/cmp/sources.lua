@@ -1,10 +1,10 @@
 local M = {}
 M.sc1 = {
+  { name = 'luasnip' }, -- For luasnip users.
   {
     name = 'html-css',
   },
   { name = 'nvim_lsp' },
-  { name = 'luasnip' }, -- For luasnip users.
   -- { name = 'zsh' },
   -- { name = 'snippy' },
   { name = 'nvim_lua' },
